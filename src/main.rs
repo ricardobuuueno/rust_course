@@ -1,3 +1,5 @@
+use chrono::prelude::*;
+
 enum Direction {
     Left,
     Right,
@@ -29,6 +31,9 @@ fn concat(first: &str, second: &str) -> String {
 
 fn main() {
     println!("Hello, world!");
+
+    let local: DateTime<Local> = Local::now();
+    println!("{:?}", local);
 
     let mut go = Direction::Left;
 
